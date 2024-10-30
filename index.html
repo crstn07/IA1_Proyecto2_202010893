@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto 2 - 202010893</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Proyecto 2: Machine Learning</h1>
+
+        <div class="input-section">
+            <h2>Selección de Datos</h2>
+            <input type="file" id="fileInput" accept=".csv">
+        </div>
+
+        <div class="model-section">
+            <h2>Selección de Modelo</h2>
+            <select id="modelSelect">
+                <option value="">Seleccione un modelo</option>
+                <option value="linearRegression">Regresión Lineal</option>
+                <option value="knn">K-Nearest Neighbors</option>
+            </select>
+        </div>
+
+        <div class="params-section">
+            <h2>Parámetros</h2>
+            <div>
+                <label for="trainSplit">Porcentaje de datos de entrenamiento:</label>
+                <input type="number" id="trainSplit" min="1" max="99" value="70">
+            </div>
+            <div>
+                <label for="objective">Objetivo del entrenamiento:</label>
+                <select id="objective">
+                    <option value="prediction">Predicción</option>
+                    <option value="classification">Clasificación</option>
+                </select>
+            </div>
+            <div id="predictionParams" style="display:none;">
+                <label for="xRange">Nuevo rango en eje X:</label>
+                <input type="number" id="xRange" min="1">
+            </div>
+            <div id="classificationParams" style="display:none;">
+                <label for="numClasses">Número de clases:</label>
+                <input type="number" id="numClasses" min="2">
+            </div>
+            <div>
+                <label for="inputVars">Variables de entrada (separadas por coma):</label>
+                <input type="text" id="inputVars">
+            </div>
+            <div>
+                <label for="outputVar">Variable de salida:</label>
+                <input type="text" id="outputVar">
+            </div>
+        </div>
+
+        <div class="button-section">
+            <button id="trainButton">Entrenar</button>
+            <button id="predictButton">Predecir</button>
+            <button id="plotButton">Mostrar Gráficas</button>
+        </div>
+
+        <div id="results" class="results-section"></div>
+    </div>
+
+</body>
+
+</html>
