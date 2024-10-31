@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #cdecf1;  
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 15px;
+}
+
+.input-section, .model-section, .params-section, .button-section, .results-section {
+    margin-bottom: 20px;
+}
+
+input, select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    display: block;
+    width: 20%;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-right:10px;
+}
+
+#results {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+}
